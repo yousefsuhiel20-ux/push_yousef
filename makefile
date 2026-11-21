@@ -6,7 +6,7 @@ RM			= rm -f
 
 INC			= push_swap.h
 
-SRCS_B		=
+SRCS_B		= rank.c small_sort.c
 
 SRCS		= $(SRCS_B)
 OBJS		= $(SRCS:.c=.o)
