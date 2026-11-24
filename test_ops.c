@@ -6,25 +6,13 @@
 /*   By: yabuhuss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/21 20:46:33 by yabuhuss          #+#    #+#             */
-/*   Updated: 2026/11/21 20:46:34 by yabuhuss         ###   ########.fr       */
+/*   Updated: 2026/11/21 22:54:24 by yabuhuss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "push_swap.h"
 #include <stdio.h>
 #include <stdlib.h>
-
-typedef struct s_list
-{
-	int				content;
-	int				index;
-	struct s_list	*next;
-}	t_list;
-
-typedef struct s_data
-{
-	t_list	*stack_a;
-	t_list	*stack_b;
-}	t_data;
 
 static void	rot_up(t_list **stack)
 {

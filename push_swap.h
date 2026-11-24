@@ -6,7 +6,7 @@
 /*   By: yabuhuss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/20 21:36:53 by yabuhuss          #+#    #+#             */
-/*   Updated: 2026/11/21 22:29:53 by yabuhuss         ###   ########.fr       */
+/*   Updated: 2026/11/24 21:25:57 by yabuhuss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,5 +90,7 @@ void				two_val(t_data *head);
 void				three_val(t_data *head);
 void				five_val(t_data *head);
 void				radix_sort(t_data *head);
+void				print_bench(t_data *data);
+double				disorder_fun(long n, t_data *head);
 
 #endif
