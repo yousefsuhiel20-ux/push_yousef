@@ -6,7 +6,7 @@
 /*   By: yabuhuss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/24 20:55:44 by yabuhuss          #+#    #+#             */
-/*   Updated: 2026/11/24 21:25:08 by yabuhuss         ###   ########.fr       */
+/*   Updated: 2026/11/26 20:13:36 by yabuhuss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int	node_val(t_list *node)
 {
-	return (*(int *)node->content);
+	return (node->content);
 }
 
 double	disorder_fun(long n, t_data *head)

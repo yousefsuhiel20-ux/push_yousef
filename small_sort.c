@@ -6,7 +6,7 @@
 /*   By: yabuhuss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/20 21:38:25 by yabuhuss          #+#    #+#             */
-/*   Updated: 2026/11/21 00:25:57 by yabuhuss         ###   ########.fr       */
+/*   Updated: 2026/11/26 20:40:23 by yabuhuss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ void	three_val(t_data *head)
 
 void	five_val(t_data *head)
 {
-	if (!head || !head->stack_a || !head->stack_a->next
+	if (!head || !head->stack_a || head->stack_b || !head->stack_a->next
 		|| !head->stack_a->next->next || !head->stack_a->next->next->next
 		|| !head->stack_a->next->next->next->next)
 		return ;
@@ -66,7 +66,6 @@ void	five_val(t_data *head)
 	pa(head);
 	pa(head);
 }
-
 // #include <stdio.h>
 
 // int	main(void)

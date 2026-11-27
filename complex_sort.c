@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   radix_sort.c                                       :+:      :+:    :+:   */
+/*   complex_sort.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yabuhuss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/21 21:04:47 by yabuhuss          #+#    #+#             */
-/*   Updated: 2026/11/21 22:11:40 by yabuhuss         ###   ########.fr       */
+/*   Updated: 2026/11/26 20:14:50 by yabuhuss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,17 +41,18 @@ static void	sort_bit(t_data *head, int size, int bit)
 		pa(head);
 }
 
-void	radix_sort(t_data *head)
+void	complex_sort(t_data *head, int size)
 {
-	int	size;
 	int	max_bit;
 	int	bit;
 
-	size = ft_lstsize((t_node *)head->stack_a);
-	max_bit = get_max_bits(size);
-	bit = 0;
 	if (!head || !head->stack_a)
 		return ;
+	size = stack_size(head->stack_a);
+	if (size > 1)
+		rank_fun(head->stack_a);
+	max_bit = get_max_bits(size);
+	bit = 0;
 	while (bit < max_bit)
 	{
 		sort_bit(head, size, bit);

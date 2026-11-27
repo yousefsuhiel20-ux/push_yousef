@@ -6,7 +6,7 @@
 /*   By: yabuhuss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/26 18:55:45 by yabuhuss          #+#    #+#             */
-/*   Updated: 2026/11/26 19:48:11 by yabuhuss         ###   ########.fr       */
+/*   Updated: 2026/11/26 20:43:52 by yabuhuss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 static void	push_b_to_a_fun(t_data *head)
 {
-
 	int	len;
 	int	pos;
 
@@ -44,16 +43,9 @@ static void	chunk_fun(t_data *head, int size)
 	while (head->stack_a)
 	{
 		if (head->stack_a->index <= i)
-		{
-			pb(head);
-			rb(head);
-			i++;
-		}
+			(pb(head), rb(head), i++);
 		else if (head->stack_a->index <= i + range)
-		{
-			pb(head);
-			i++;
-		}
+			(pb(head), i++);
 		else
 			ra(head);
 	}

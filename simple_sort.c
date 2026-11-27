@@ -6,7 +6,7 @@
 /*   By: yabuhuss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/25 21:49:42 by yabuhuss          #+#    #+#             */
-/*   Updated: 2026/11/26 19:17:27 by yabuhuss         ###   ########.fr       */
+/*   Updated: 2026/11/26 20:41:57 by yabuhuss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ static int	find_min(t_data *head)
 	{
 		if (counter_i->content < min_val)
 		{
-			min_val =(counter_i->content);
+			min_val = (counter_i->content);
 			min_pos = idx;
 		}
 		counter_i = counter_i->next;
@@ -66,6 +66,22 @@ void	simple_sort(t_data *head, int size)
 {
 	if (!head || !head->stack_a || size <= 0)
 		return ;
+	rank_fun(head->stack_a);
+	if (size == 2)
+	{
+		two_val(head);
+		return ;
+	}
+	if (size == 3)
+	{
+		three_val(head);
+		return ;
+	}
+	if (size == 5)
+	{
+		five_val(head);
+		return ;
+	}
 	while (size)
 	{
 		rotate_stack(head, size);
